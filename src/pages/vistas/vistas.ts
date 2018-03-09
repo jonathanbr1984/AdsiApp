@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ActionSheetController } from "ionic-angular";
+import { AlertController } from "ionic-angular";
 
 /**
  * Generated class for the VistasPage page.
@@ -16,7 +17,10 @@ import { ActionSheetController } from "ionic-angular";
 })
 export class VistasPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public actionSheetCtrl: ActionSheetController) {
+  constructor(public navCtrl: NavController, 
+    public navParams: NavParams, 
+    public actionSheetCtrl: ActionSheetController, 
+    public alertCtrl: AlertController) {
   }
 
   ionViewDidLoad() {
@@ -48,6 +52,15 @@ export class VistasPage {
       ]
     });
     actionSheet.present();
+  }
+
+  showAlert(){
+    let alert = this.alertCtrl.create({
+      title: 'New Friend!',
+      subTitle: 'Your friend, david Ceron, just accepted your friend request!',
+      buttons: ['OK']
+    });
+    alert.present();
   }
 
 }
