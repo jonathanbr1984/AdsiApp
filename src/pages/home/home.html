@@ -8,11 +8,43 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+  <h3>ADSI</h3>
 
   <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
+    Si te perdes, el <a href="http://ionicframework.com/docs/v2">documento</a> te muestra informacion.
   </p>
-
   <button ion-button secondary menuToggle>Toggle Menu</button>
-</ion-content>
+  <ion-item>
+    <ion-label color="primary" stacked>Titulo</ion-label>
+    <ion-input type="text" placeholder="Ingrese un titulo"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="primary" stacked>Parrafo</ion-label>
+    <ion-input type="text" placeholder="Ingrese un texto"></ion-input>
+  </ion-item>
+
+  <button ion-button block>Enviar</button>
+
+
+  <ion-card *ngFor="let item of posts">
+    <img width="600" height="390" src="../assets/imgs/card-saopaolo.png"/>
+    <div class="card-title">{{item.title}}</div>
+    <div class="card-subtitle">{{item.body}}</div>
+  </ion-card> 
+
+
+<!--   <ion-card>
+  <button ion-item *ngFor="let item of posts; let i <= lenght.posts">
+    <h3>{{item.title}}</h3> 
+    <p>{{item.body}}</p> 
+  </button>
+</ion-card>
+ -->
+ <!-- <ion-list>
+  <button ion-item *ngFor="let item of posts">
+    <h3>{{item.title}}</h3> 
+    <p>{{item.body}}</p>
+  </button>
+ </ion-list>
+ --></ion-content>
