@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { PostService} from './post.service';
+import { PostCreateComponent } from '../post-create/post-create';
 
 @Component({
   selector: 'page-home',
@@ -24,6 +25,13 @@ export class HomePage {
   	},err => {
   		console.log("Error", err);
   	})
+  }
+
+/*
+* Este metodo carga la vista para crear un nuevo post
+*/
+  loadCreatePost(){
+    this.navCtrl.push(PostCreateComponent);
   }
 
 }

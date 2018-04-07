@@ -17,13 +17,18 @@ import { SplashScreen } from '@ionic-native/splash-screen';
  */
 import { PostService } from '../pages/home/post.service';
 
+/*
+* Components
+*/
+import { PostCreateComponent } from '../pages/post-create/post-create';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     ListPage,
-    VistasPage
+    VistasPage,
+    PostCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +40,8 @@ import { PostService } from '../pages/home/post.service';
     MyApp,
     HomePage,
     ListPage, 
-    VistasPage
+    VistasPage,
+    PostCreateComponent
   ],
   providers: [
     StatusBar,
